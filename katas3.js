@@ -1,76 +1,249 @@
-const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
+
+function showResults(cabecalho, resultado){
+    // Create a div, with class "bar", and set the width to 100px.
+     let newElement = document.createElement("ul");
+     newElement.className = "katas3";
+
+     let newKata = document.createElement("li")
+     newKata.innerText = resultado;
+
+     // Place a text label inside the new div.
+     newElement.appendChild(newKata);
+    
+     // Put the new div on the page inside the existing element "d1".
+     let destination = document.getElementById("katas3");
+     destination.appendChild(cabecalho);
+     destination.appendChild(newElement);
+}
+
 
 function kata1() {
-    // implemente o código do kata 1 aqui
+    let resultado ="";
+    for (let counter = 1; counter <= 25; counter++) {
+    resultado += counter + ", "      
+    } 
+    
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 1"
+return showResults(cabecalho, resultado)
 }
+kata1()
+
 
 function kata2() {
-    // implemente o código do kata 2 aqui
+    let resultado ="";
+    for (let counter = 25; counter >= 1; counter--) {
+    resultado += counter + ", "      
+    } 
+    
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 2"
+return showResults(cabecalho, resultado)
 }
+kata2()
 
 function kata3() {
-    // implemente o código do kata 3 aqui
+    let resultado ="";
+    for (let counter = -1; counter >= -25; counter--) {
+    resultado += counter + ", "      
+    } 
+    
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 3"
+return showResults(cabecalho, resultado)
 }
+kata3()
 
 function kata4() {
-    // implemente o código do kata 4 aqui
+    let resultado ="";
+    for (let counter = -25; counter <= -1; counter++) {
+    resultado += counter + ", "      
+    } 
+    
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 4"
+return showResults(cabecalho, resultado)
 }
+kata4()
 
 function kata5() {
-    // implemente o código do kata 5 aqui
+    let resultado ="";
+    for (let counter = 25; counter >= -25; counter -=2) {
+    resultado += counter + ", "      
+    } 
+    
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 5"
+return showResults(cabecalho, resultado)
 }
+kata5()
 
 function kata6() {
-    // implemente o código do kata 6 aqui
+    let resultado ="";
+    for (let counter = 3; counter <= 100; counter+=3) {
+    resultado += counter + ", "      
+    } 
+    
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 6"
+return showResults(cabecalho, resultado)
 }
+kata6()
 
 function kata7() {
-    // implemente o código do kata 7 aqui
+    let resultado ="";
+    for (let counter = 3; counter <= 100; counter+=3) {
+    resultado += counter + ", "      
+    } 
+    
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 7"
+return showResults(cabecalho, resultado)
 }
+kata7()
 
 function kata8() {
-    // implemente o código do kata 8 aqui
+    let resultado ="";
+    for (let counter = 3; counter <=99; counter++) {
+        if (counter % 3 === 0) {
+            resultado += counter + ", "
+        } 
+        else if (counter % 7 === 0)
+        resultado += counter + ", "      
+    } 
+
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 8"
+return showResults(cabecalho, resultado)
 }
+kata8()
 
 function kata9() {
-    // implemente o código do kata 9 aqui
+    let resultado ="";
+    for (let counter = 5; counter <=95; counter+=10) {
+    resultado += counter + ", "
+    }    
+let cabecalho = document.createElement ("h2")
+cabecalho.innerText = "Kata 9"
+return showResults(cabecalho, resultado)
 }
+kata9()
 
-function kata10() {
-    // implemente o código do kata 10 aqui
-}
+const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
 
-function kata11() {
-    // implemente o código do kata 11 aqui
+function kata10(){
+    const resultado = []
+    for (let counter = 0; counter < sampleArray.length; counter++) {
+           resultado.push (sampleArray[counter])
+    }
+    
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 10"
+    return showResults(cabecalho, resultado)
 }
+kata10()
 
-function kata12() {
-    // implemente o código do kata 12 aqui
+function kata11() { 
+    const resultado = []
+    for (let counter = 0; counter < sampleArray.length; counter++) {
+        if (sampleArray[counter] % 2 === 0) {
+            resultado.push (sampleArray[counter])
+         }      
+   }
+    
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 11"
+    return showResults(cabecalho, resultado)
+  
 }
+kata11()
 
-function kata13() {
-    // implemente o código do kata 13 aqui
+function kata12() { 
+    const resultado = []
+    for (let counter = 0; counter < sampleArray.length; counter++) {
+        if (sampleArray[counter] % 2 !== 0) {
+            resultado.push (sampleArray[counter])
+         }      
+   }
+    
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 12"
+    return showResults(cabecalho, resultado)
+  
 }
+kata12()
 
-function kata14() {
-    // implemente o código do kata 14 aqui
+function kata13() { 
+    const resultado = []
+    for (let counter = 0; counter < sampleArray.length; counter++) {
+        if (sampleArray[counter] % 8 === 0) {
+            resultado.push (sampleArray[counter])
+         }      
+   }
+    
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 13"
+    return showResults(cabecalho, resultado)
+  
 }
+kata13()
 
-function kata15() {
-    // implemente o código do kata 15 aqui
+function kata14() { 
+    const resultado = []
+    for (let counter = 0; counter < sampleArray.length; counter++) {
+    resultado.push (sampleArray[counter]*sampleArray[counter])
+    }      
+   
+    
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 14"
+    return showResults(cabecalho, resultado)
+  
 }
+kata14()
+
+function kata15() { 
+   let resultado = 0
+   for (let counter = 1; counter <=20; counter ++ ) {
+       resultado = (counter +resultado)
+   }
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 15"
+    return showResults(cabecalho, resultado)
+}
+kata15()
 
 function kata16() {
-    // implemente o código do kata 16 aqui
+    let resultado = 0
+    for (let counter = 0; counter <sampleArray.length; counter++) {
+           resultado = (sampleArray[counter] + resultado)
+    }
+    
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 16"
+    return showResults(cabecalho, resultado)
 }
+kata16()
 
 function kata17() {
-    // implemente o código do kata 17 aqui
+    let resultado = ""
+    resultado = Math.min.apply(Math, sampleArray)
+
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 17"
+    return showResults(cabecalho, resultado)
 }
+kata17()
 
 function kata18() {
-    // implemente o código do kata 18 aqui
+    let resultado = ""
+    resultado = Math.max.apply(Math, sampleArray)
+
+    let cabecalho = document.createElement ("h2")
+    cabecalho.innerText = "Kata 18"
+    return showResults(cabecalho, resultado)
 }
+kata18()
 
 /**
  * Daqui em diante são os bônus, por sua conta e risco
